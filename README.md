@@ -1,19 +1,19 @@
 # ImplemetasiImageFiltering
 import numpy as np
 
-# Langkah 1: Buat matriks kernel (filter)
+Langkah 1: Buat matriks kernel (filter)
 H = np.array([[1, 1, 1],   # Contoh kernel deteksi tepi (edge detection)
               [1, 4, 1],
               [1, 1, 1]])
 
-# Langkah 2: Buat matriks gambar input (image original)
+Langkah 2: Buat matriks gambar input (image original)
 X = np.array([[1, 0, 0, 0, 0],
               [1, 1, 1, 0, 0],
               [1, 1, 1, 0, 0],
               [1, 0, 0, 0, 0],
               [0, 0, 0, 0, 0]])
 
-# Langkah 3: Tentukan fungsi konvolusi dengan parameter stride dan padding
+Langkah 3: Tentukan fungsi konvolusi dengan parameter stride dan padding
 def convolve2d(X, H, stride=1, padding=0):
     # Menambahkan padding pada gambar input (X)
     if padding > 0:
@@ -38,10 +38,10 @@ def convolve2d(X, H, stride=1, padding=0):
     
     return Y
 
-# Langkah 4: Lakukan konvolusi pada gambar input dengan kernel
+Langkah 4: Lakukan konvolusi pada gambar input dengan kernel
 Y = convolve2d(X, H, stride=1, padding=0)
 
-# Tampilkan hasil
+Tampilkan hasil
 print("Gambar Input (X):")
 print(X)
 
